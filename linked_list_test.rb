@@ -17,6 +17,11 @@ class NodeTest < MiniTest::Test
   def test_a_node_is_created_and_has_a_pointer_to_next_node
     assert_equal "head_node", @node.value
   end
+
+  def test_head_node_has_a_reference_to_next_node
+    @node = Node.new("head_node", "next_node")
+    assert_equal "next_node", @node.next_node
+  end
 end
 
   class LinkedListTest < MiniTest::Test
