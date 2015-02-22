@@ -11,16 +11,15 @@ class NodeTest < MiniTest::Test
   end
 
   def setup
-    @node = Node.new("head_node", "next_node")
+    @node = Node.new("head_node", nil)
   end
 
-  def test_a_node_has_a_value_and_a_reference_to_the_next_node
-    skip
-    assert_equal ("head_node" "next_node"), @node.next_node
+  def test_a_node_is_created_and_has_a_pointer_to_next_node
+    assert_equal "head_node", @node.value
   end
 end
 
-  class Linked_List < MiniTest::Test
+  class LinkedListTest < MiniTest::Test
 
     def setup
       @linked_list = LinkedList.new
