@@ -1,5 +1,5 @@
 
-class LinkedList 
+class IterativeLinkedList 
 
   attr_accessor :head, :tail 
 
@@ -46,7 +46,7 @@ class LinkedList
   def to_s
       pointer = @head
     while pointer != nil
-      print "#{pointer.value} -> "
+      return "#{pointer.value} -> #{pointer.next_node.value} "
       pointer = pointer.next_node
     end 
       print "\n"
