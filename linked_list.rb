@@ -1,35 +1,35 @@
 
 class LinkedList 
 
-  attr_accessor :head, :tail
+  attr_accessor :head, :tail 
 
   # list is empty which means head is nil
   def empty?
     @head.nil?
   end
 
-  def shift
-    node_to_return = @head
-      if node_to_return
-         @head = @head.next_node
-         node_to_return.value
-      else
-         return nil
-      end
-  end
+  # def shift
+  #   node_to_return = @head
+  #     if node_to_return
+  #        @head = @head.next_node
+  #        node_to_return.value
+  #     else
+  #        return nil
+  #     end
+  # end
 
-  def append(value)
-    if empty?
-      # list is empty
-      # which means @head is nil
-        @head = @tail = Node.new(value, nil)
-    else
-        new_node = Node.new(value, nil)
-        @tail.next_node = new_node
-        @tail = new_node
-    end
-        self
-  end
+  # def append(value)
+  #   if empty?
+  #     # list is empty
+  #     # which means @head is nil
+  #       @head = @tail = Node.new(value, nil)
+  #   else
+  #       new_node = Node.new(value, nil)
+  #       @tail.next_node = new_node
+  #       @tail = new_node
+  #   end
+  #       self
+  # end
 
   def prepend(value)
     if empty?
@@ -38,7 +38,7 @@ class LinkedList
        @head = @tail = Node.new(value, nil)
     else
        new_node = Node.new(value, @head)
-       @head = new_node
+       @head =  new_node
     end
        self
   end
