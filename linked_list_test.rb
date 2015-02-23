@@ -42,23 +42,18 @@ end
       assert_equal "Gabe", @node.next_node
     end
 
+    def test_it_can_prepend_another_node
+      @node = Node.new("Jim", "Gabe")
+      @linked_list.prepend("Jim")
+      assert_equal "Jim", @node.value
+    end
+
     def test_it_will_print_out_node_and_a_pointer_to_next_node
       skip
-      @node = Node.new(nil, "Gabe")
       @linked_list.prepend("Gabe")
-      assert_equal "Gabe -> ", @node.to_s
+      assert_equal "Gabe -> ", @linked_list.to_s
     end
 
-    def test_it_can_append_a_new_element
-     skip
-    end
-
-    def test_it_can_append_another_new_element
-      skip
-      @linked_list.append("next_link")
-      @linked_list.append("next_link")
-      assert_equal 2, @linked_list.link_list_count
-    end
 
 
 end
