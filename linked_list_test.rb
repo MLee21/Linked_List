@@ -24,10 +24,10 @@ class NodeTest < MiniTest::Test
   end
 end
 
-  class LinkedListTest < MiniTest::Test
+  class IterativeLinkedListTest < MiniTest::Test
 
     def setup
-      @linked_list = LinkedList.new
+      @linked_list = IterativeLinkedList.new
     end
 
     def test_if_list_is_empty
@@ -49,11 +49,12 @@ end
     end
 
     def test_it_will_print_out_node_and_a_pointer_to_next_node
-      skip
-      @linked_list.prepend("Gabe")
-      assert_equal "Gabe -> ", @linked_list.to_s
+      list = IterativeLinkedList.new
+      list.prepend("Gabe")
+      list.prepend("Jim")
+      assert_equal "Jim -> Gabe ", list.to_s
     end
 
-
+   
 
 end
